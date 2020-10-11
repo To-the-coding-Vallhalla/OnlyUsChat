@@ -49,8 +49,8 @@ namespace OnlyUsChat
                 server_port);
             try
             {
+                this.Visible = false;
                 mainChat.ShowDialog();
-                this.Close();
             }
             catch 
             {

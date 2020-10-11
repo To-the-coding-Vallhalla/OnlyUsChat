@@ -149,7 +149,8 @@ namespace OnlyUsChat_SERVER
 
                 TcpClient client = pair.Key as TcpClient;
                 NetworkStream stream = client.GetStream();
-                byte[] buffer = null;
+                byte[] buffer;
+
                 if (flag)
                 {
                     if (message.Equals("leaveChat"))
