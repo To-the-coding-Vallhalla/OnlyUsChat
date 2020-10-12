@@ -18,6 +18,10 @@ namespace OnlyUsChat
 
         private Thread t_handler = null;
 
+        // 서버 정보
+        IPAddress serverIP;
+        int serverPort;
+
         public MainChatForm(string nickName, IPAddress serverIP, int serverPort)
         {
             InitializeComponent();
@@ -25,15 +29,25 @@ namespace OnlyUsChat
             user_name = nickName;
 
             this.FormClosing += new FormClosingEventHandler(Disconnect);
+            this.Shown += new EventHandler(shown);
 
-            Connect_Server(serverIP, serverPort);
+            this.serverIP = serverIP;
+            this.serverPort = serverPort;
+        }
+
+        private void shown(object sender, EventArgs e)
+        {
+            Connect_Server();
         }
 
         private void Disconnect(object sender, FormClosingEventArgs e)
         {
-            byte[] buffer = Encoding.Unicode.GetBytes("leaveChat" + "$");
-            stream.Write(buffer, 0, buffer.Length);
-            stream.Flush();
+            if(stream != null)
+            {
+                byte[] buffer = Encoding.Unicode.GetBytes("leaveChat" + "$");
+                stream.Write(buffer, 0, buffer.Length);
+                stream.Flush();
+            }
 
             Application.ExitThread();
             Environment.Exit(0);
@@ -64,7 +78,7 @@ namespace OnlyUsChat
             }
         }
 
-        private void Connect_Server(IPAddress serverIP, int serverPort)
+        public void Connect_Server()
         {
             try
             {
