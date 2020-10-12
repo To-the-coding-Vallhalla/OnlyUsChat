@@ -26,7 +26,7 @@ namespace OnlyUsChat
 
         private void connectBtn_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(nickNameTxtBox.Text) || string.IsNullOrEmpty(addressTxtBox.Text))
+            if(string.IsNullOrWhiteSpace(nickNameTxtBox.Text) || string.IsNullOrEmpty(addressTxtBox.Text))
             {
                 return;
             }
@@ -58,5 +58,13 @@ namespace OnlyUsChat
             }
         }
 
+        private void Enter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                connectBtn_Click(sender, e);
+            }
+        }
     }
 }

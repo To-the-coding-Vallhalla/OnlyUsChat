@@ -41,6 +41,7 @@
             this.nickNameTxtBox.Name = "nickNameTxtBox";
             this.nickNameTxtBox.Size = new System.Drawing.Size(254, 21);
             this.nickNameTxtBox.TabIndex = 1;
+            this.nickNameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Enter_KeyPress);
             // 
             // connectBtn
             // 
@@ -68,6 +69,7 @@
             this.addressTxtBox.Name = "addressTxtBox";
             this.addressTxtBox.Size = new System.Drawing.Size(253, 21);
             this.addressTxtBox.TabIndex = 0;
+            this.addressTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Enter_KeyPress);
             // 
             // label2
             // 
