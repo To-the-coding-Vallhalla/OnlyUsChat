@@ -127,5 +127,14 @@ namespace OnlyUsChat
                 send_btn_Click(this, e);
             }
         }
+
+        private void sendTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                send_btn_Click(this, e);
+            }
+        }
     }
 }

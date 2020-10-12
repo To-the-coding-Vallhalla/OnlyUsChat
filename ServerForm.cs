@@ -127,7 +127,7 @@ namespace OnlyUsChat_SERVER
 
             if (message.Equals("leaveChat"))
             {
-                string displayMessage = "leave user : " + user_name;
+                string displayMessage = "Leave user : " + user_name;
                 DisplayText(displayMessage);
                 SendMessageAll("leaveChat", user_name, true);
             }
