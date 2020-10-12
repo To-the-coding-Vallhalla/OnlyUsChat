@@ -182,12 +182,14 @@ namespace OnlyUsChat_SERVER
                 consoleTextBox.BeginInvoke(new MethodInvoker(delegate
                 {
                     consoleTextBox.AppendText(date + text + Environment.NewLine);
+                    consoleTextBox.ScrollToCaret(); // 스크롤 이동
                 }
                 ));
             }
             else
             {
                 consoleTextBox.AppendText(date + text + Environment.NewLine);
+                consoleTextBox.ScrollToCaret(); // 스크롤 이동
             }
         }
 

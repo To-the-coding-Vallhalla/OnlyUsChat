@@ -111,12 +111,14 @@ namespace OnlyUsChat
                 chatTextBox.BeginInvoke(new MethodInvoker(delegate
                 {
                     chatTextBox.AppendText(text + Environment.NewLine);
+                    chatTextBox.ScrollToCaret(); // 스크롤 이동
                 }
                 ));
             }
             else
             {
                 chatTextBox.AppendText(text + Environment.NewLine);
+                chatTextBox.ScrollToCaret(); // 스크롤 이동
             }
         }
 
