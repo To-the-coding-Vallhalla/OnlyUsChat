@@ -57,7 +57,13 @@ namespace OnlyUsChat
         private void send_btn_Click(object sender, EventArgs e)
         {
             sendTextBox.Focus();
-            byte[] buffer = Encoding.Unicode.GetBytes(this.sendTextBox.Text + "$");
+            // 공백문자나 빈문자열을 보내면 전송안함.
+            if (string.IsNullOrWhiteSpace(sendTextBox.Text))
+            {
+                sendTextBox.Text = string.Empty;
+                return;
+            }
+            byte[] buffer = Encoding.Unicode.GetBytes(sendTextBox.Text + "$");
             stream.Write(buffer, 0, buffer.Length);
             stream.Flush();
             sendTextBox.Text = string.Empty;

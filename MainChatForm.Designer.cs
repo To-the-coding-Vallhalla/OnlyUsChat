@@ -35,11 +35,13 @@
             // 
             // chatTextBox
             // 
+            this.chatTextBox.Font = new System.Drawing.Font("굴림", 10F);
             this.chatTextBox.Location = new System.Drawing.Point(12, 12);
             this.chatTextBox.Name = "chatTextBox";
             this.chatTextBox.ReadOnly = true;
             this.chatTextBox.Size = new System.Drawing.Size(677, 399);
-            this.chatTextBox.TabIndex = 0;
+            this.chatTextBox.TabIndex = 99;
+            this.chatTextBox.TabStop = false;
             this.chatTextBox.Text = "";
             // 
             // sendTextBox
@@ -47,7 +49,7 @@
             this.sendTextBox.Location = new System.Drawing.Point(12, 417);
             this.sendTextBox.Name = "sendTextBox";
             this.sendTextBox.Size = new System.Drawing.Size(677, 21);
-            this.sendTextBox.TabIndex = 1;
+            this.sendTextBox.TabIndex = 0;
             this.sendTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sendTextBox_KeyPress);
             // 
             // send_btn
@@ -55,7 +57,7 @@
             this.send_btn.Location = new System.Drawing.Point(695, 417);
             this.send_btn.Name = "send_btn";
             this.send_btn.Size = new System.Drawing.Size(97, 23);
-            this.send_btn.TabIndex = 2;
+            this.send_btn.TabIndex = 1;
             this.send_btn.Text = "전송";
             this.send_btn.UseVisualStyleBackColor = true;
             this.send_btn.Click += new System.EventHandler(this.send_btn_Click);

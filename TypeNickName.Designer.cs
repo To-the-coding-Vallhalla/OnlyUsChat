@@ -40,7 +40,7 @@
             this.nickNameTxtBox.Location = new System.Drawing.Point(70, 39);
             this.nickNameTxtBox.Name = "nickNameTxtBox";
             this.nickNameTxtBox.Size = new System.Drawing.Size(254, 21);
-            this.nickNameTxtBox.TabIndex = 0;
+            this.nickNameTxtBox.TabIndex = 1;
             // 
             // connectBtn
             // 
@@ -48,7 +48,7 @@
             this.connectBtn.Location = new System.Drawing.Point(14, 66);
             this.connectBtn.Name = "connectBtn";
             this.connectBtn.Size = new System.Drawing.Size(310, 67);
-            this.connectBtn.TabIndex = 1;
+            this.connectBtn.TabIndex = 2;
             this.connectBtn.Text = "서버 접속";
             this.connectBtn.UseVisualStyleBackColor = true;
             this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
@@ -59,7 +59,7 @@
             this.label1.Location = new System.Drawing.Point(14, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 4;
             this.label1.Text = "닉네임 : ";
             // 
             // addressTxtBox
@@ -67,7 +67,7 @@
             this.addressTxtBox.Location = new System.Drawing.Point(70, 12);
             this.addressTxtBox.Name = "addressTxtBox";
             this.addressTxtBox.Size = new System.Drawing.Size(253, 21);
-            this.addressTxtBox.TabIndex = 3;
+            this.addressTxtBox.TabIndex = 0;
             // 
             // label2
             // 
@@ -75,7 +75,7 @@
             this.label2.Location = new System.Drawing.Point(6, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 12);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 3;
             this.label2.Text = "서버주소 :";
             // 
             // TypeNickName
